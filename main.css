@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+
+#quote-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    max-width: 250px;
+    z-index: 9999;
+    /* Set a high z-index value to make it appear in front of other elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #1f1d1d;
+    color: #fff;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation-name: popUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    margin: 10px;
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#close-button,
+#check-button {
+    cursor: pointer;
+    margin: 15px;
+    font-size: 20px;
+    color: #999;
+    background: none;
+    border: none;
+}
+
+#close-button:hover,
+#check-button:hover {
+    color: #fff;
+}
+
+#quoter {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
